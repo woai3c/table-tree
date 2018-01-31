@@ -54,5 +54,5 @@ $('.table-tree').tableTree({
 <p>ajax函数 最好自己写一个覆盖组件里的 因为组件里的只是一个DEMO 真正跟后台对接需要传什么参数由自己决定。</p>
 <p>如果不会布服务器环境，可以下载Hbuilder编辑器将代码文件放进去直接打开html文件观看DEMO。</p>
 ![img](https://raw.githubusercontent.com/woai3c/table-tree/master/demo.png)
-![Alt text](https://raw.githubusercontent.com/woai3c/table-tree/master/demo.png)
+<p>![Alt text](https://raw.githubusercontent.com/woai3c/table-tree/master/demo.png)</p>
 
