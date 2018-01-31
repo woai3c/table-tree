@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>datagrid-tree</title>
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/table-tree.css">
+    <script src="js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/table-tree.js"></script>
+</head>
+<body>
+    <div class="table-tree">
+        
+    </div>
+    <script type="text/javascript">
+        $('.table-tree').tableTree({
+            url: 'json/demo.json',
+            tableHead: ['地区（降雨量）','1月','2月','3月'],
+            width: 600,
+        })
+    </script>
+</body>
+</html>

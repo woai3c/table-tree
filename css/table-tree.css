@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+.tableTree .level2 td:first-child {
+	padding-left: 20px;
+}
+.tableTree .level3 td:first-child {
+	padding-left: 40px;
+}
+.tableTree .level4 td:first-child {
+	padding-left: 60px;
+}
+.tableTree .level5 td:first-child {
+	padding-left: 80px;
+}
+.tableTree .level6 td:first-child {
+	padding-left: 100px;
+}
+.tableTree .level7 td:first-child {
+	padding-left: 120px;
+}
+.tableTree .level8 td:first-child {
+	padding-left: 140px;
+}
+.tableTree .level9 td:first-child {
+	padding-left: 160px;
+}
+.tableTree .level10 td:first-child {
+	padding-left: 180px;
+}
+.tableTree table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	box-sizing: border-box;
+}
+.tableTree table td {
+	font-size: 14px;
+	color: #72777a;
+	box-sizing: border-box;
+	word-break: break-all;
+	padding: 10px 0;
+}
+.tableTree table td:first-child {
+	width: 200px;
+}
+.tableTree table td>input {
+	width: 60px;
+}
+.tableTree .check_tr {
+	background: lightgoldenrodyellow;
+}
+.tableTree .iconfont {
+	font-size: 14px;
+	margin-right: 5px;
+}
+.tableTree ul {
+	font-size: 0;
+}
+.tableTree li {
+	font-size: 14px;
+	list-style: none;
+	display: inline-block;
+	color: #72777a;
+	padding: 0 10px;
+}
+.tableTree .table_head {
+	background: #f7f7f7;
+	box-sizing: border-box;
+}
+.tableTree .table_head td {
+	padding: 10px 0;
+	color: #000000;
+	font-weight: bold;
+}
+.tableTree .table_head td:first-child {
+	padding-left: 20px;
+}
+.tableTree .level1>table td {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.tableTree .level1>table td:first-child {
+	font-weight: bold;
+}
+.tableTree .toolBar input {
+	width: 100px;
+	height: 28px;
+	border-radius: 3px;
+	border: 1px solid deepskyblue;
+	box-sizing: border-box;
+	padding: 0 10px;
+	color: #555;
+}
+.tableTree {
+	border: 1px solid #ddd;
+	margin: auto;
+	overflow: auto;
+	box-sizing: border-box;
+	position: relative;
+}
+.tableTree button {
+	padding: 5px 10px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	background: deepskyblue;
+}
