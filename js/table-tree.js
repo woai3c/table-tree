@@ -76,12 +76,12 @@
         	for (var key in data) {
         		this.level = 1;
         		this.renderHtml += '<div class="level level' + this.level + '">';
-        		this.sortData(data[key], this.level, key); 
+        		this.renderData(data[key], this.level, key); 
         		this.renderHtml += '</div>';
         	}
         	this.container.append(this.renderHtml); 
         },
-        sortData: function(data, level, parentKey) { // 渲染表格
+        renderData: function(data, level, parentKey) { // 渲染表格
         	var length = this.getObjLength(data);
         	var count = 0;
         	for (var key in data) {
@@ -103,7 +103,7 @@
         		} else {
         			this.level++;
         			this.renderHtml += '<div class="level level' + this.level + '">';
-        			this.sortData(data[key], level, key); 
+        			this.renderData(data[key], level, key); 
         		}
         		if (count == length) {
         			this.level--;
@@ -114,11 +114,11 @@
         	}
         	
         },
-       	loadData: function() {
+       	loadData: function() { // 懒加载
        		this.level = parseFloat(this.currentParent.attr('class').replace('level level', ''));
        		var data = this.options.ajax();
 			this.renderHtml = '';
-       		this.sortData(data, this.level); 
+       		this.renderData(data, this.level); 
        		this.currentParent.append(this.renderHtml);
        		this.extend();
         	this.select();
@@ -133,6 +133,9 @@
         		}
 				var value = that.element.find('.input_find').val();
 				var fragment = document.createDocumentFragment();
+				if (!value) {
+					return;
+				}
 				that.container.find('tr').each(function(i, tr) {
 					var isFirst = true;
 					$(tr).find('td').each(function(j, td) {
@@ -284,7 +287,7 @@
         getObjLength: function(obj) { // 获取对象长度
 			return Object.keys(obj).length;
         },
-        setStyle: function() {
+        setStyle: function() { // 设置样式
         	this.options.width += '';
         	this.options.height += '';
         	if (this.options.width.indexOf('%') != -1) {
