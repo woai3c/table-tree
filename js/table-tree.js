@@ -303,7 +303,7 @@
         	} else {
         		this.element.height(this.options.height + 'px')
         	}
-        	this.element.find('.table_head').width(this.element.width() + 'px')
+        	this.container.height(this.container.height() - 40 + 'px')
         }
     }
 

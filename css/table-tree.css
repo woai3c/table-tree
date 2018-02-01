@@ -2,6 +2,13 @@
 	margin: 0;
 	padding: 0;	
 }
+.tableTree {
+	border: 1px solid #ddd;
+	margin: auto;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
 .tableTree .level2 td:first-child {
 	padding-left: 20px;
 }
@@ -93,13 +100,6 @@
 	padding: 0 10px;
 	color: #555;
 }
-.tableTree {
-	border: 1px solid #ddd;
-	margin: auto;
-	overflow: auto;
-	box-sizing: border-box;
-	position: relative;
-}
 .tableTree button {
 	padding: 5px 10px;
 	border-radius: 3px;
@@ -108,6 +108,10 @@
 	cursor: pointer;
 	color: #fff;
 	background: deepskyblue;
+}
+.tableTree .container_datagrid_tree {
+	height: 100%;
+	overflow: auto;
 }
 .tableTree .icon-loading {
 	position: absolute;
@@ -126,4 +130,18 @@
 	100% {
 		transform: rotate(360deg);
 	}
+}
+::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
 }
