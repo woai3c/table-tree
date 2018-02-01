@@ -115,11 +115,13 @@
         	
         },
        	loadData: function() { // 懒加载
+            this.element.append('<i class="iconfont icon-loading"></i>');
        		this.level = parseFloat(this.currentParent.attr('class').replace('level level', ''));
        		var data = this.options.ajax();
 			this.renderHtml = '';
        		this.renderData(data, this.level); 
        		this.currentParent.append(this.renderHtml);
+            this.element.find('.icon-loading').remove();
        		this.extend();
         	this.select();
        	},
