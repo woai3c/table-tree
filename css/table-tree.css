@@ -115,12 +115,8 @@
 }
 .tableTree .icon-loading {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
 	font-size: 24px;
 	color: #888;
-	transform: rotate(360deg);
 	animation: rotate 0.8s linear infinite;
 }
 @keyframes rotate {
@@ -144,4 +140,12 @@
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     border-radius: 0;
     background: rgba(0,0,0,0.1);
+}
+.table-tree-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.1);
 }

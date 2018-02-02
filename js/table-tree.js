@@ -114,14 +114,19 @@
         	}
         	
         },
-       	loadData: function() { // 懒加载
-            this.element.append('<i class="iconfont icon-loading"></i>');
+       	loadData: function() { // 懒加载 
+            this.element.append('<div class="table-tree-mask"><i class="iconfont icon-loading"></i></div>');
+            var loading = this.element.find('.icon-loading');
+            var height = this.element.height() > document.documentElement.clientHeight? document.documentElement.clientHeight : this.element.height();
+            var width = this.element.width() > document.documentElement.clientWidth? document.documentElement.clientWidth : this.element.width();
+            loading.css('left', width/2 - loading.width()/2 + 'px');
+            loading.css('top', height/2 - loading.height()/2 + 'px');
        		this.level = parseFloat(this.currentParent.attr('class').replace('level level', ''));
        		var data = this.options.ajax();
 			this.renderHtml = '';
        		this.renderData(data, this.level); 
        		this.currentParent.append(this.renderHtml);
-            this.element.find('.icon-loading').remove();
+            this.element.find('.table-tree-mask').remove();
        		this.extend();
         	this.select();
        	},
