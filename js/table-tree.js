@@ -133,7 +133,7 @@
         	}
        		this.currentParent.append(this.renderHtml);
             this.element.find('.table-tree-mask').remove();
-       		this.extend();
+       		this.extend(this.currentParent);
         	this.select();
        	},
         find: function() { // 查找
@@ -232,9 +232,10 @@
         		}
         	})
         },
-        extend: function() { // 展开收缩
+        extend: function(div) { // 展开收缩
         	var that = this;
-			this.element.find('.level').each(function(i, e) { // 展开 收起
+        	div = div || this.element;
+			div.find('.level').each(function(i, e) { // 展开 收起
 				var td = null;
 				var str = '';
 				if (e.children.length > 1) {
