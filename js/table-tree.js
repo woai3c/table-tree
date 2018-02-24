@@ -22,11 +22,11 @@
         };
         this.options = $.extend({}, this.defaults, opt);
         this.renderHtml = '';
-        this.container = null;
-        this.toolBar = null;
-        this.currentParent = null;
-        this.ajaxId = ''; 
-        this.tempHtml = '';
+        this.container = null; // $('.container_datagrid_tree')
+        this.toolBar = null; // 工具栏
+        this.currentParent = null; // 选中tr时当前table的父容器
+        this.ajaxId = ''; // table的ID 
+        this.tempHtml = ''; // 查询：先储存当前HTML再执行查询
     }
 
     //定义TableTree的方法
