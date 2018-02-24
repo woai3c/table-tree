@@ -39,6 +39,12 @@
 			}
 			this.createTable(this.options.ajax());
 			this.events();
+			this.delete();
+			this.find();
+			this.edit();
+			this.save();
+			this.add();
+			this.setStyle();
         },
         createTool: function() { // 工具栏
         	var data = [{add:'添加'}, {delete:'删除'}, {edit:'编辑'}, {save:'保存'}, {find:'查询'}];
@@ -282,7 +288,9 @@
         },
         select: function() { // 选中
         	var that = this;
-        	this.container.find('tr').on('click', function() { // 选中      	
+        	var trs = this.container.find('tr');
+        	trs.off('click');
+        	trs.on('click', function() { // 选中      	
 				that.container.find('tr').removeClass('check_tr');
 				$(this).addClass('check_tr');
 				that.currentParent = $(this).parent().parent().parent();
@@ -291,12 +299,6 @@
         events: function() { // 事件管理
         	this.extend();
         	this.select();
-			this.delete();
-			this.find();
-			this.edit();
-			this.save();
-			this.add();
-			this.setStyle();
         },
         getObjLength: function(obj) { // 获取对象长度
 			return Object.keys(obj).length;
