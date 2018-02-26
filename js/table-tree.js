@@ -74,6 +74,7 @@
         	if (this.element.find('.container_datagrid_tree').length) {
         		this.element.find('.container_datagrid_tree').html('');
         		this.renderHtml = '';
+        		this.container = this.element.find('.container_datagrid_tree');
         	} else {
 	        	var html = '<div class="level container_datagrid_tree"></div>';
 	        	this.element.append(html);  
