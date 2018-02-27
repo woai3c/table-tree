@@ -32,6 +32,7 @@
     //定义TableTree的方法
     TableTree.prototype = {
         init: function() {    // 初始化		
+            this.element.html('');
         	this.element.addClass('tableTree'); 
 			this.createTool();
 			if (this.options.tableHead) {
@@ -71,15 +72,9 @@
         	this.element.append(html);     			
         },
         createTable: function(data) { 
-        	if (this.element.find('.container_datagrid_tree').length) {
-        		this.element.find('.container_datagrid_tree').html('');
-        		this.renderHtml = '';
-        		this.container = this.element.find('.container_datagrid_tree');
-        	} else {
-	        	var html = '<div class="level container_datagrid_tree"></div>';
-	        	this.element.append(html);  
-	        	this.container = this.element.find('.container_datagrid_tree');
-        	}
+        	var html = '<div class="level container_datagrid_tree"></div>';
+        	this.element.append(html);  
+        	this.container = this.element.find('.container_datagrid_tree');
         	for (var key in data) {
         		this.level = 1;
         		this.renderHtml += '<div class="level level' + this.level + '">';
