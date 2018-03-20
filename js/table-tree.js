@@ -270,7 +270,7 @@
 							$(this).attr('data-show', 'false');
 							table.siblings().hide();
 							this.innerHTML = '<i class="iconfont icon-iconfontadd"></i>' + str;
-						} else {
+						} else if ($(this).attr('data-show') == 'false') {
 							$(this).attr('data-show', 'true');
 							table.siblings().show();
 							this.innerHTML = '<i class="iconfont icon-jianhao"></i>' + str;
